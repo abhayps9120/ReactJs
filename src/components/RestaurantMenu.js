@@ -2,6 +2,7 @@ import { CDN_URL } from "../../utils/constants";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../../utils/useRestaurantMenu";
+import RestCategory from "./RestCategory"
 
 const RestaurantMenu = () => {
     const {resId} = useParams();
@@ -14,15 +15,13 @@ if(resInfo===null)
     }
 
 const {itemCards} = resInfo.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card;
-
+const categories = resInfo.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter((c) => c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 
     return (
-        <div className="menu">
-            <img src={CDN_URL + resInfo?.cards[2]?.card?.card?.info?.cloudinaryImageId}></img>
-            <h1>{resInfo?.cards[2]?.card?.card?.info?.name}</h1>
-            <h2>Menu</h2>
-            <ul>{itemCards.map(item=><li key={item.card.info.id}>{item.card.info.name}:{item.card.info.defaultPrice/100 || item.card.info.price/100 }</li>)}</ul>
-
+        <div className="text-center"> 
+            <h1 className="font-extrabold my-10 text-2xl">{resInfo?.cards[2]?.card?.card?.info?.name}</h1>
+            <h2 className="text-4xl">Menu</h2>
+            {categories.map((category)=><RestCategory data={category?.card?.card}/>)}
         </div>
     )
 }
