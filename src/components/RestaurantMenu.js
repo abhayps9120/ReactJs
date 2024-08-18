@@ -9,7 +9,7 @@ const RestaurantMenu = () => {
 
     const resInfo = useRestaurantMenu(resId);
     
-    const [showIndex,setShowIndex]= useState(1);
+    const [showIndex,setShowIndex]= useState(null );
 
 if(resInfo===null)
     {

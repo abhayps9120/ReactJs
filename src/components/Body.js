@@ -1,8 +1,9 @@
 import Rest , {withPromotedLabel} from "./Rest";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import { UserContext } from "../../utils/UserContext";
 
 const Body = () => {
   const [listofrest, setlistofrest] = useState([]);
@@ -30,6 +31,8 @@ const Body = () => {
   const [searchText, setsearchText] = useState([]);
 
   const RestPromoted = withPromotedLabel(Rest);
+
+  const {loggedInUser , setuserName} = useContext(UserContext);
 
   if (filteredRest.length === 0) {
     return <Shimmer />;
@@ -70,7 +73,12 @@ const Body = () => {
         >
           Top Rated Restauants.
         </button>
-      </div></div>
+      </div>
+      <div>
+      <label>Update User Name :</label>
+      <input className="border border-black m-1" value={loggedInUser}  onChange={(e) => setuserName(e.target.value)}/>
+      </div>
+      </div>
       <div className="flex flex-wrap">
         {filteredRest.map((restaurant) => (
           <Link
