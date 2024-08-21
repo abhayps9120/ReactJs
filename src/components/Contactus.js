@@ -1,9 +1,12 @@
 const Contact=() => {
     return (
-        <div>
-            <h1>Contact Us</h1>
-            <h3>7618981009</h3>
-            <h3>abhayps9120@gmail.com</h3>
+        <div className=" text-center">
+            <h1 className="font-bold text-3xl">Contact Us</h1>
+            <form>
+                <input placeholder="Input Box" className="border border-black m-2 "></input>
+                <input placeholder="Input Box" className="border border-black m-2"></input>
+                <button className="border border-black m-2 bg-purple-300 rounded-sm">Submit</button>
+            </form>
         </div>
     )  
 }

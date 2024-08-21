@@ -4,7 +4,7 @@ import {CDN_URL} from "../../utils/constants";
 const Rest = (props) => {
     const {resData} = props;
     return(
-        <div className="m-4 p-4 w-[200px] bg-white rounded-lg hover:border border-black border-solid">
+        <div data-testid="resCard" className="m-4 p-4 w-[200px] bg-white rounded-lg hover:border border-black border-solid">
             <img className="res-logo rounded-lg" src={CDN_URL+resData.info.cloudinaryImageId}></img>
             <h3 className="font-semibold py-4 text-xl">{resData.info.name}</h3>
             <h4>{resData.info.cuisines.join(",")}</h4>

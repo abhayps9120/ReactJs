@@ -44,6 +44,7 @@ const Body = () => {
       <div className="flex items-center">
         <div className="Search">
         <input
+          data-testid="9528"
           type="text"
           className="border border-solid border-black rounded-lg"
           placeholder="Search Restaurant Here !"
@@ -71,7 +72,7 @@ const Body = () => {
             setfilteredRest(filter);
           }}
         >
-          Top Rated Restauants.
+          Top Rated Restauants
         </button>
       </div>
       <div>
