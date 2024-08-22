@@ -1,3 +1,3 @@
 export const CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-export const LOGO_URL="https://marketplace.canva.com/EAFpeiTrl4c/1/0/1600w/canva-abstract-chef-cookingrestaurant-free-logo-9Gfim1S8fHg.jpg";
+export const LOGO_URL="https://media.istockphoto.com/id/981368726/vector/restaurant-food-drinks-logo-fork-knife-background-vector-image.jpg?s=612x612&w=0&k=20&c=9M26CBkCyEBqUPs3Ls5QCjYLZrB9sxwrSFmnAmNCopI=";
 export const ID_URL ="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.66500&lng=77.44770&restaurantId=";

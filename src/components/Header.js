@@ -20,8 +20,9 @@ const Header = () =>{
     return (
         <div className="flex justify-between bg-orange-300 shadow-lg sm:bg-yellow-400">
             <div className="logo-container">
-                <img className="w-56 " src={LOGO_URL} alt="logo" />
+                <img className="w-40 " src={LOGO_URL} alt="logo" />
             </div>
+            <h1 className="text-5xl text-center font-extrabold p-2">Abhay Dhaba</h1>
             <div className="nav-items flex items-center">
                 <ul className="flex justify-between p-4 m-8 ">
                     <li className="px-4">Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
